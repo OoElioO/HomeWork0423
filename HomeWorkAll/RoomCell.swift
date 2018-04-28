@@ -8,28 +8,54 @@
 
 import UIKit
 
-class RoomCell: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+class RoomCell: UICollectionViewCell {
+    var label: UILabel!
+    var label2: UILabel!
+    var label3: UILabel!
+    var label4: UILabel!
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = UIColor.green
+        label = UILabel(frame: CGRect(x: 0, y: 0,
+                                          width: UIScreen.main.bounds.size.width,
+                                          height: 25))
+        
+        label.text = "總統套房"
+        label.textColor = UIColor.orange
+        label.font = UIFont.systemFont(ofSize: 24)
+        
+        self.addSubview(label)
+        label2 = UILabel(frame: CGRect(x: 0, y: 25,
+                                      width: UIScreen.main.bounds.size.width,
+                                      height: 16))
+        
+        label2.text = "總統套房"
+        label2.textColor = UIColor.orange
+        label2.font = UIFont.systemFont(ofSize: 14)
+        
+        self.addSubview(label2)
+        label3 = UILabel(frame: CGRect(x: 0, y: 40,
+                                      width: UIScreen.main.bounds.size.width,
+                                      height: 16))
+        
+        label3.text = "總統套房"
+        label3.textColor = UIColor.orange
+        label3.font = UIFont.systemFont(ofSize: 14)
+        
+        self.addSubview(label3)
+        label4 = UILabel(frame: CGRect(x: 0, y: 55,
+                                      width: UIScreen.main.bounds.size.width,
+                                      height: 16))
+        
+        label4.text = "總統套房"
+        label4.textColor = UIColor.orange
+        label4.font = UIFont.systemFont(ofSize: 14)
+        
+        self.addSubview(label4)
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
